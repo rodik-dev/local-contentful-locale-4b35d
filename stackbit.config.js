@@ -15,6 +15,8 @@ const getDocumentLocale = (document, locales) => {
     return locales.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
 };
 
+console.log("stackbit.config.js init");
+
 class MyContentSource extends ContentfulContentSource {
     async getModels() {
         return (await super.getModels()).map((model) => {
