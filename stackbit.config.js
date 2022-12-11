@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 const LOCALIZED_MODELS = ['localizedPage', 'CtaSection'];
 const getDocumentLocale = (document, locales) => {
     if (document.fields.slug) {
-        return locales.find(locale => document.fields.slug?.value?.startsWith(locale));
+        return locales.find((locale) => document.fields.slug?.value?.startsWith(locale));
     }
 
     return locales.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
@@ -17,7 +17,7 @@ const getDocumentLocale = (document, locales) => {
 
 class MyContentSource extends ContentfulContentSource {
     async getModels() {
-        return (await super.getModels()).map(model => {
+        return (await super.getModels()).map((model) => {
             if (LOCALIZED_MODELS.includes(model.name)) {
                 return {
                     ...model,
@@ -30,9 +30,10 @@ class MyContentSource extends ContentfulContentSource {
 
     convertEntries(entries, modelMap) {
         const result = super.convertEntries(entries, modelMap);
-        return result.map(document => {
+        return result.map((document) => {
             if (LOCALIZED_MODELS.includes(document.modelName)) {
-                const locale = getDocumentLocale(document, this.locales)
+                const locale = getDocumentLocale(document, this.locales);
+                console.log('localized:: ', { model: document.modelName, locale: locale });
                 return {
                     ...document,
                     locale
