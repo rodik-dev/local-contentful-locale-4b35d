@@ -20,14 +20,22 @@ export async function getEntries(type, queryParams) {
 }
 
 export async function getPage(slug) {
-    return getEntries(TYPE_PAGE, {
+    return Promise.all([getEntries(TYPE_PAGE, {
         'fields.slug': slug
-    }).then((items) => items.length > 0 ? items[0] : null);
+    }),getEntries('localizedPage', {
+        'fields.slug': slug
+    })]).then(([pages,localizedPages])=>{
+        return [...pages, ...localizedPages]
+    }).then((items) => {
+        return items.length > 0 ? items[0] : null;
+    });
 }
 
 export async function getAllPageSlugs() {
-    return getEntries(TYPE_PAGE)
-        .then((pages) => pages.map((page) => page.fields.slug));
+    return Promise.all([getEntries(TYPE_PAGE),getEntries('localizedPage')])
+        .then(([pages, localizedPages]) => {
+            return [...pages, ...localizedPages].map((page) => page.fields.slug);
+        });
 }
 
 
