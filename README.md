@@ -12,7 +12,7 @@ This is a minimal starting point for new Stackbit projects. It is built with Nex
 
 The typical development process is to begin by working locally.
 
-Create local Stackbit project from this repo: 123
+Create local Stackbit project from this repo: 1234
 
 ```txt
 npx create-stackbit-app@latest --starter contentful
