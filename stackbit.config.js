@@ -34,7 +34,7 @@ class MyContentSource extends ContentfulContentSource {
         const result = super.convertEntries(entries, modelMap);
         return result.map((document) => {
             if (LOCALIZED_MODELS.includes(document.modelName)) {
-                const locale = getDocumentLocale(document, this.locales);
+                const locale = getDocumentLocale(document, this.locales.map(item=>item.code));
                 return {
                     ...document,
                     locale
