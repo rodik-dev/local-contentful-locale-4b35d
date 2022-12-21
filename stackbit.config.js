@@ -30,7 +30,7 @@ class MyContentSource extends ContentfulContentSource {
         });
     }
 
-    convertEntries(entries, modelMap) {
+    mapDocuments(entries, modelMap) {
         const result = super.convertEntries(entries, modelMap);
         return result.map((document) => {
             if (LOCALIZED_MODELS.includes(document.modelName)) {
