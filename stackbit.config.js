@@ -18,18 +18,6 @@ const getDocumentLocale = (document, locales) => {
 console.log("DEBUG:: stackbit.config.js init");
 
 class MyContentSource extends ContentfulContentSource {
-    async getModels() {
-        return (await super.getModels()).map((model) => {
-            if (LOCALIZED_MODELS.includes(model.name)) {
-                return {
-                    ...model,
-                    localized: true
-                };
-            }
-            return model;
-        });
-    }
-
     mapDocuments({documents, models}) {
         return documents.map((document) => {
             if (LOCALIZED_MODELS.includes(document.modelName)) {
@@ -78,6 +66,18 @@ export default {
             accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN
         })
     ],
+
+    mapModels({models}) {
+        return models.map((model) => {
+            if (LOCALIZED_MODELS.includes(model.name)) {
+                return {
+                    ...model,
+                    localized: true
+                };
+            }
+            return model;
+        });
+    }
 
     // models property allows tweaking/extending any existing model (as well as adding new ones).
     // Typically used to mark page-type models for the visual editor and map content items of these
