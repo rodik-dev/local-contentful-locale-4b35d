@@ -7,12 +7,13 @@ import { ContentfulContentSource } from '@stackbit/cms-contentful';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const LOCALIZED_MODELS = ['localizedPage', 'CtaSection'];
-const getDocumentLocale = (document, locales) => {
+const LOCALES = ['en-US', 'he']
+const getDocumentLocale = (document) => {
     if (document.fields.slug) {
-        return locales.find((locale) => document.fields.slug?.value?.startsWith(locale));
+        return LOCALES.find((locale) => document.fields.slug?.value?.startsWith(locale));
     }
 
-    return locales.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
+    return LOCALES.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
 };
 
 console.log("DEBUG:: stackbit.config.js init");
@@ -70,7 +71,7 @@ export default {
     mapDocuments({documents, models}) {
         return documents.map((document) => {
             if (LOCALIZED_MODELS.includes(document.modelName)) {
-                const locale = getDocumentLocale(document, this.locales.map(item=>item.code));
+                const locale = getDocumentLocale(document);
                 return {
                     ...document,
                     locale
