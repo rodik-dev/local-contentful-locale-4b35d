@@ -67,6 +67,19 @@ export default {
         });
     },
 
+    mapDocuments({documents, models}) {
+        return documents.map((document) => {
+            if (LOCALIZED_MODELS.includes(document.modelName)) {
+                const locale = getDocumentLocale(document, this.locales.map(item=>item.code));
+                return {
+                    ...document,
+                    locale
+                };
+            }
+            return document;
+        });
+    },
+
     // models property allows tweaking/extending any existing model (as well as adding new ones).
     // Typically used to mark page-type models for the visual editor and map content items of these
     // type to page URLs. This enables the editor to create a sitemap from content and open the
