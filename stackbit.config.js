@@ -77,7 +77,7 @@ export default {
             }
             return model;
         });
-    }
+    },
 
     // models property allows tweaking/extending any existing model (as well as adding new ones).
     // Typically used to mark page-type models for the visual editor and map content items of these
