@@ -18,18 +18,6 @@ const getDocumentLocale = (document, locales) => {
 console.log("DEBUG:: stackbit.config.js init");
 
 class MyContentSource extends ContentfulContentSource {
-    mapDocuments({documents, models}) {
-        return documents.map((document) => {
-            if (LOCALIZED_MODELS.includes(document.modelName)) {
-                const locale = getDocumentLocale(document, this.locales.map(item=>item.code));
-                return {
-                    ...document,
-                    locale
-                };
-            }
-            return document;
-        });
-    }
 
     async createDocument(options, locale = 'en-US') {
         if (options.model.localized) {
