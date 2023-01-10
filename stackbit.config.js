@@ -24,7 +24,6 @@ class MyContentSource extends ContentfulContentSource {
     async createDocument(options) {
         if (LOCALIZED_MODELS.includes(options.model.name)) {
             const localeField = options.model.fields.find(field => field.name === 'locale');
-            console.log("USER CODE:: doc is localized, searching for locale field", { localeField })
             if (localeField) {
                 options.updateOperationFields.locale = {  type: 'enum', value: options.locale};
             }
