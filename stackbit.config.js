@@ -94,6 +94,7 @@ export default {
         page: { type: 'page', urlPath: '/{slug}' },
         localizedPage: { type: 'page', urlPath: '/{slug}', localized: true},
         CtaSection: {
+            name: 'CtaSection',
             localized: true,
             fields: [
                 {
