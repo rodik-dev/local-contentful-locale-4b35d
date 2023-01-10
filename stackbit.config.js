@@ -90,7 +90,9 @@ export default {
         localizedPage: { type: 'page', urlPath: '/{slug}' },
         CtaSection: {
             fields: [
-                {type: 'enum', name: 'locale', }
+                {
+                    type: 'enum', name: 'locale', 
+                }
             ]
         }
     }
