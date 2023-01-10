@@ -61,17 +61,17 @@ export default {
         })
     ],
 
-    mapModels({models}) {
-        return models.map((model) => {
-            if (LOCALIZED_MODELS.includes(model.name)) {
-                return {
-                    ...model,
-                    localized: true
-                };
-            }
-            return model;
-        });
-    },
+    // mapModels({models}) {
+    //     return models.map((model) => {
+    //         if (LOCALIZED_MODELS.includes(model.name)) {
+    //             return {
+    //                 ...model,
+    //                 localized: true
+    //             };
+    //         }
+    //         return model;
+    //     });
+    // },
 
     mapDocuments({documents, models}) {
         return documents.map((document) => {
