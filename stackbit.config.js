@@ -28,6 +28,8 @@ class MyContentSource extends ContentfulContentSource {
             if (localeField) {
                 options.updateOperationFields.locale = {  type: 'enum', value: options.locale};
             }
+
+            
         }
         return super.createDocument(options);
     }
