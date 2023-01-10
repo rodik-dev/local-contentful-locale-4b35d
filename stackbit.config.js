@@ -97,6 +97,7 @@ export default {
             name: 'CtaSection',
             localized: true,
             type: 'data',
+            description: "GOT FROM CONFIG",
             fields: [
                 {
                     "type": "enum",
