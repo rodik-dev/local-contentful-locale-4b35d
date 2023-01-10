@@ -96,6 +96,7 @@ export default {
         CtaSection: {
             name: 'CtaSection',
             localized: true,
+            type: 'data',
             fields: [
                 {
                     "type": "enum",
