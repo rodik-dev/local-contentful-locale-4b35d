@@ -94,10 +94,6 @@ export default {
         page: { type: 'page', urlPath: '/{slug}' },
         localizedPage: { type: 'page', urlPath: '/{slug}', localized: true},
         CtaSection: {
-            name: 'CtaSection',
-            localized: true,
-            type: 'data',
-            description: "GOT FROM CONFIG",
             fields: [
                 {
                     "type": "enum",
