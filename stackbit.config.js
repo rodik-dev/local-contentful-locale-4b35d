@@ -23,7 +23,10 @@ class MyContentSource extends ContentfulContentSource {
     async createDocument(options, locale = 'en-US') {
         if (options.model.localized) {
             options.locale = locale;
-            const localeField = options.model.fields.find(field => field.name === 'locale')
+            const localeField = options.model.fields.find(field => field.name === 'locale');
+            if (localeField) {
+                
+            }
         }
         return super.createDocument(options);
     }
