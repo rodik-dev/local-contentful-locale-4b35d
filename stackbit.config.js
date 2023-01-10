@@ -102,8 +102,6 @@ export default {
 			"en-US"
 		]
 	}
-}
-                    type: 'enum', name: 'locale', hidden: true
                 }
             ]
         }
