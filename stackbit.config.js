@@ -29,7 +29,7 @@ class MyContentSource extends ContentfulContentSource {
                 options.updateOperationFields.locale = {  type: 'enum', value: options.locale};
             }
 
-            const slugField = options.model.fields.find(field => field.name === 'locale');
+            const slugField = options.model.fields.find(field => field.name === 'slug');
         }
         return super.createDocument(options);
     }
