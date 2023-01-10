@@ -100,7 +100,7 @@ export default {
                     "name": "locale",
                     "label": "locale",
                     "required": true,
-                    "hidden": false,
+                    "hidden": true,
                     "localized": false,
                     "options": [
                         "he",
