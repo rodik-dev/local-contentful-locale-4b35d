@@ -94,6 +94,7 @@ export default {
         page: { type: 'page', urlPath: '/{slug}' },
         localizedPage: { type: 'page', urlPath: '/{slug}' },
         CtaSection: {
+            localized: true,
             fields: [
                 {
                     "type": "enum",
