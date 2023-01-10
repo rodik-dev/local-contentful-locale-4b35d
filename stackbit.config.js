@@ -92,7 +92,7 @@ export default {
     // appropriate page fields for editing as you navigate between fields.
     models: {
         page: { type: 'page', urlPath: '/{slug}' },
-        localizedPage: { type: 'page', urlPath: '/{slug}' },
+        localizedPage: { type: 'page', urlPath: '/{slug}', localized: true},
         CtaSection: {
             localized: true,
             fields: [
