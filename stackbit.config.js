@@ -108,9 +108,6 @@ export default {
                     ]
                 }
             ]
-        },
-        MarkdownSection: {
-            localized: true
         }
     }
 };
