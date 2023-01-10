@@ -23,7 +23,7 @@ class MyContentSource extends ContentfulContentSource {
 
     async createDocument(options) {
         console.log("RUNNING USER CODE CREATE DOC", {updateOps: options.updateOperationFields, locale: options.locale, model: options.model})
-        if (options.model.localized) {
+        if (LOCALIZED_MODELS.includes(options.model.name)) {
             const localeField = options.model.fields.find(field => field.name === 'locale');
             console.log("USER CODE:: doc is localized, searching for locale field", { localeField })
             if (localeField) {
