@@ -94,8 +94,8 @@ export default {
                     "type": "enum",
                     "name": "locale",
                     "label": "locale",
-                    "required": true,
-                    "hidden": false,
+                    "required": false,
+                    "hidden": true,
                     "localized": false,
                     "options": [
                         "he",
