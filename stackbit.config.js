@@ -32,7 +32,7 @@ class MyContentSource extends ContentfulContentSource {
             const slugField = options.model.fields.find(field => field.name === 'slug');
             if (slugField) {
                 if (!options.updateOperationFields?.slug?.value.startsWith(locale)) {
-                    throw new Error(`Slug must start with locale '${}'`)
+                    throw new Error(`Slug must start with locale '${locale}'`)
                 }
             }
 
