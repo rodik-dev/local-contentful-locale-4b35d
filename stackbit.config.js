@@ -25,7 +25,7 @@ class MyContentSource extends ContentfulContentSource {
             options.locale = locale;
             const localeField = options.model.fields.find(field => field.name === 'locale');
             if (localeField) {
-                options.updateOperation
+                options.updateOperationFields
             }
         }
         return super.createDocument(options);
