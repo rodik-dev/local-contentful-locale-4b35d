@@ -91,8 +91,6 @@ export default {
         CtaSection: {
             fields: [
                 {
-                    {
-	"3": {
 		"type": "enum",
 		"name": "locale",
 		"label": "locale",
