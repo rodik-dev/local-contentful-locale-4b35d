@@ -82,7 +82,7 @@ export default {
         });
     },
 
-    mapDocuments({documents, models}) {
+    mapDocuments({documents, models, locales}) {
         return documents.map((document) => {
             if (LOCALIZED_MODELS.includes(document.modelName)) {
                 const locale = getDocumentLocale(document);
