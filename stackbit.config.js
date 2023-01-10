@@ -30,7 +30,7 @@ class MyContentSource extends ContentfulContentSource {
             }
 
             const slugField = options.model.fields.find(field => field.name === 'slug');
-            if (slugField && ) {
+            if (slugField) {
                 
             }
 
