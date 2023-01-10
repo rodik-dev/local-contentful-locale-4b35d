@@ -91,17 +91,17 @@ export default {
         CtaSection: {
             fields: [
                 {
-		"type": "enum",
-		"name": "locale",
-		"label": "locale",
-		"required": true,
-		"hidden": false,
-		"localized": false,
-		"options": [
-			"he",
-			"en-US"
-		]
-	}
+        "type": "enum",
+        "name": "locale",
+        "label": "locale",
+        "required": true,
+        "hidden": false,
+        "localized": false,
+        "options": [
+            "he",
+            "en-US"
+        ]
+    }
                 }
             ]
         }
