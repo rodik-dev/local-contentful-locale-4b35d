@@ -23,6 +23,7 @@ class MyContentSource extends ContentfulContentSource {
     async createDocument(options, locale = 'en-US') {
         if (options.model.localized) {
             options.locale = locale;
+            
         }
         return super.createDocument(options);
     }
