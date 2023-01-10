@@ -20,7 +20,7 @@ console.log("DEBUG:: stackbit.config.js init");
 
 class MyContentSource extends ContentfulContentSource {
 
-    async createDocument(options, locale = 'en-US') {
+    async createDocument(options) {
         console.log("RUNNING USER CODE CREATE DOC", {updateOps: options.updateOperationFields, locale})
         if (options.model.localized) {
             options.locale = locale;
