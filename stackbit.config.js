@@ -127,7 +127,6 @@ export default {
                     "localized": false,
                     "options": [
                         "he",
-                        "it",
                         "en-US"
                     ]
                 }
