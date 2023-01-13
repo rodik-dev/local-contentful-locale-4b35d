@@ -30,9 +30,6 @@ class MyContentSource extends ContentfulContentSource {
 
             const slugField = options.model.fields.find(field => field.name === 'slug');
             if (slugField) {
-                                if (options.updateOperationFields?.slug === "oops") {
-                    throw 'you cannot create oops'
-                }
                 if (options.updateOperationFields?.slug && !options.updateOperationFields?.slug?.value.startsWith(options.locale)) {
                     throw new Error(`slug '${options.updateOperationFields?.slug?.value}' must start with locale '${options.locale}'`);
                 }
