@@ -115,19 +115,6 @@ export default {
                     ]
                 }
             ]
-        },
-        MarkdownSection: {
-            fields: [
-                {
-                    "type": "enum",
-                    "name": "locale",
-                    "label": "locale",
-                    "required": false,
-                    "hidden": true,
-                    "localized": false
-                }
-            ]
         }
-
     }
 };
