@@ -108,11 +108,7 @@ export default {
                     "label": "locale",
                     "required": false,
                     "hidden": true,
-                    "localized": false,
-                    "options": [
-                        "he",
-                        "en-US"
-                    ]
+                    "localized": false
                 }
             ]
         }
