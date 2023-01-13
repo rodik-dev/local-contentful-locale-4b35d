@@ -22,7 +22,6 @@ console.log("DEBUG:: stackbit.config.js init");
 class MyContentSource extends ContentfulContentSource {
 
     async createDocument(options) {
-        throw 'error, not good';
         if (LOCALIZED_MODELS.includes(options.model.name)) {
             const localeField = options.model.fields.find(field => field.name === 'locale');
             if (localeField) {
