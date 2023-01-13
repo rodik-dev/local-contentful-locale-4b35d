@@ -15,9 +15,6 @@ const Page = (props) => {
             </Head>
             <main data-sb-object-id={_id}>
                 {fields.sections?.map((section, index) => {
-                    if (section.fields.locale === 'he') {
-                        return;
-                    }
                     const Component = getComponent(section._type);
 
                     return (<Component path={`sections.${index}`} key={`${section.type}-${index}`} {...section} />);
