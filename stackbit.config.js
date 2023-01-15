@@ -111,7 +111,7 @@ export default {
                 }
             ]
         },
-        CtaSection: {
+        MarkdownSection: {
             fields: [
                 {
                     "type": "enum",
