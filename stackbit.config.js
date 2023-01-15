@@ -110,17 +110,6 @@ export default {
                     "localized": false
                 }
             ]
-        },
-        MarkdownSection: {
-            fields: [
-                {
-                    "type": "enum",
-                    "name": "locale",
-                    "required": false,
-                    "hidden": true,
-                    "localized": false
-                }
-            ]
         }
     }
 };
