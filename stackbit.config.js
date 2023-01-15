@@ -110,6 +110,17 @@ export default {
                     "localized": false
                 }
             ]
+        },
+                CtaSection: {
+            fields: [
+                {
+                    "type": "enum",
+                    "name": "locale",
+                    "required": false,
+                    "hidden": true,
+                    "localized": false
+                }
+            ]
         }
     }
 };
