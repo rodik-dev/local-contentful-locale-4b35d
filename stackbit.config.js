@@ -111,7 +111,7 @@ export default {
                 }
             ]
         },
-                CtaSection: {
+        CtaSection: {
             fields: [
                 {
                     "type": "enum",
