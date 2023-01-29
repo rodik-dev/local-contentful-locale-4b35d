@@ -106,7 +106,7 @@ export default {
                     "type": "enum",
                     "name": "locale",
                     "required": false,
-                    "hidden": true,
+                    
                     "localized": false
                 }
             ]
