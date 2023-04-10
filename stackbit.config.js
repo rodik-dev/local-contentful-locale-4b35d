@@ -11,7 +11,7 @@ const LOCALIZED_MODELS = ['localizedPage', 'CtaSection', 'MarkdownSection'];
 const LOCALES = ['en-US', 'he']
 const getDocumentLocale = (document) => {
     if (document.fields.slug) {
-        return LOCALES.find((locale) => document.fields.slug?.value?.toLowerCase().startsWith(locale.toLowerCase));
+        return LOCALES.find((locale) => document.fields.slug?.value?.toLowerCase().startsWith(locale.toLowerCase) || );
     }
 
     return LOCALES.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
