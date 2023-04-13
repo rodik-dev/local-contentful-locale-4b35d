@@ -10,9 +10,7 @@ const MarkdownSection = (props) => {
                     {props.fields.markdown}
                 </ReactMarkdown>
                 )}
-                {props.fields.rich && (
-                documentToReactComponents(fields.test, options)
-                )}
+                {props.fields.rich && documentToReactComponents(fields.test, options)}
                 
             </div>
         </Container>
