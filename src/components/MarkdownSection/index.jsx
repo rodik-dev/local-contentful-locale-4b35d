@@ -8,6 +8,7 @@ const MarkdownSection = (props) => {
                 <ReactMarkdown>
                     {props.fields.markdown}
                 </ReactMarkdown>
+                {}
             </div>
         </Container>
     );
