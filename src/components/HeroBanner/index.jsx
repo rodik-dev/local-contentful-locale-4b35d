@@ -8,7 +8,6 @@ const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const fields = node.data.target.fields;
-      
       return <Button {...fields} />
     }
   }
