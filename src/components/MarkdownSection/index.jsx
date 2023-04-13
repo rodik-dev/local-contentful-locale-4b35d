@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import Container from '../Container';
 import Button from '../Button';
 import Card from '../Card';
+import CtaSection from '../CtaSection';
 
 const options = {
   renderNode: {
@@ -17,7 +18,7 @@ const options = {
       } else if (contentType === "Card") {
           return <div style={{width: "350px"}}><Card {...fields} data-sb-object-id={sys.id}></Card></div>
       } else if (contentType === "CtaSection") {
-          return <Card {...fields} data-sb-object-id={sys.id}></Card>
+          return <CtaSection {...fields} data-sb-object-id={sys.id}></Card>
       }
     },
 
