@@ -8,7 +8,7 @@ const HeroBanner = (props) => {
         backgroundImage: `url(https:${fields?.image?.fields?.file?.url})`
     };
 
-    console.log("Hero fields", fields)
+    console.log("Hero fields", fields);
 
     return (
         <section
