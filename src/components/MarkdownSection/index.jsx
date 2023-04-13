@@ -10,8 +10,12 @@ const MarkdownSection = (props) => {
                     {props.fields.markdown}
                 </ReactMarkdown>
                 )}
+                {props.fields.rich && (
+                <ReactMarkdown>
+                    {props.fields.markdown}
+                </ReactMarkdown>
+                )}
                 
-                {}
             </div>
         </Container>
     );
