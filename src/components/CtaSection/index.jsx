@@ -3,7 +3,7 @@ import Button from '../Button';
 import styles from './style.module.css';
 
 const CtaSection = (props) => {
-    const { path, fields, dataSbFieldPath } = props;
+    const { path, fields, dataSbObjectId } = props;
     const { button: { fields: buttonData } } = fields
 
     return (
