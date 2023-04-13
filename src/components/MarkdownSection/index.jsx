@@ -11,8 +11,11 @@ const options = {
       const sys = node.data.target.sys;
       const contentType = sys.contentType.sys.id
       console.log("EMbedded ENTRY!", {node, fields});
-      
-      return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
+      if (contentType === "Button") {
+        return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
+      } else if (contentType === "Card") {
+          
+      }
     },
 
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
