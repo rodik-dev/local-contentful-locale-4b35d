@@ -9,7 +9,7 @@ const options = {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const fields = node.data.target.fields;
       console.log("EMbedded ENTRY!", {node, fields});
-      return <Button url={} text={fields.buttonText} primary={fields.primary} />
+      return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} />
     }
   }
 };
