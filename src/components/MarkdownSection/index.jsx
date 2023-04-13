@@ -13,6 +13,9 @@ const MarkdownSection = (props) => {
                 
                 
             </div>
+            <div data-sb-field-path=".rich">
+                {props.fields.rich && documentToReactComponents(fields.test, options)}
+            </div>
         </Container>
     );
 };
