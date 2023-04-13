@@ -18,7 +18,7 @@ const options = {
       } else if (contentType === "Card") {
           return <div style={{width: "350px"}}><Card {...fields} data-sb-object-id={sys.id}></Card></div>
       } else if (contentType === "CtaSection") {
-          return <CtaSection fields={fields} data-sb-object-id={sys.id}></CtaSection>
+          return <CtaSection fields={fields} sboid={sys.id}></CtaSection>
       }
     },
 
