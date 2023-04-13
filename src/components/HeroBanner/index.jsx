@@ -1,5 +1,6 @@
 import Container from '../Container';
 import styles from './style.module.css';
+import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const options = {
