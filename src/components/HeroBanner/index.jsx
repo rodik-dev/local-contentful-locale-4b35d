@@ -7,7 +7,7 @@ import Button from '../Button';
 const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      const { title, description } = node.data.target.fields;
+      const fields = node.data.target.fields;
       
       return <Button title={title} description={description} />
     }
