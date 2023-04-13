@@ -2,6 +2,23 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ReactMarkdown from 'react-markdown';
 import Container from '../Container';
 
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+      const fields = node.data.target.fields;
+      const sys = node.data.target.sys;
+      console.log("EMbedded ENTRY!", {node, fields});
+      return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
+    },
+
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      const fields = node.data.target.fields;
+        console.log("EMbedded Asset!", {node});
+      return <img src={fields.file.url} />
+    }
+  }
+};
+
 const MarkdownSection = (props) => {
     return (
         <Container data-sb-field-path={props.path}>
