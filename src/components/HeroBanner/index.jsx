@@ -15,7 +15,7 @@ const options = {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       
         console.log("EMbedded Asset!", {node});
-      return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} />
+      return <img />
     }
   }
 };
