@@ -10,7 +10,7 @@ const options = {
       return <CustomComponent title={title} description={description} />
     }
   }
-};
+}; 
 
 const HeroBanner = (props) => {
     const { path, fields } = props;
