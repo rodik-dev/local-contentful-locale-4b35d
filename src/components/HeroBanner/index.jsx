@@ -9,7 +9,7 @@ const options = {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const fields = node.data.target.fields;
       
-      return <Button title={title} description={description} />
+      return <Button {...fields} />
     }
   }
 };
