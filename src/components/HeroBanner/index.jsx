@@ -10,6 +10,7 @@ const options = {
       const fields = node.data.target.fields;
       const sys = node.data.target.sys;
       console.log("EMbedded ENTRY!", {node, fields});
+      
       return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
     },
 
