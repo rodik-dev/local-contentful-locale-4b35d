@@ -3,11 +3,11 @@ import Button from '../Button';
 import styles from './style.module.css';
 
 const CtaSection = (props) => {
-    const { path, fields, dataSbObjectId } = props;
+    const { path, fields, sboid } = props;
     const { button: { fields: buttonData } } = fields
 
     return (
-        <Container data-sb-field-path={path} data-sb-object-id={dataSbObjectId}>
+        <Container data-sb-field-path={path} data-sb-object-id={sboid}>
             <div className={styles['cta-container']}>
                 <div className={styles.cta__texts}>
                     <p data-sb-field-path=".title" className={styles.cta__title}>{fields.title}</p>
