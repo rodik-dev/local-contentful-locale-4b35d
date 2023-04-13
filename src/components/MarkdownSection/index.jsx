@@ -9,7 +9,7 @@ const options = {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const fields = node.data.target.fields;
       const sys = node.data.target.sys;
-      const contentType = sys.
+      const contentType = sys.contentType.sys.id
       console.log("EMbedded ENTRY!", {node, fields});
       
       return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
