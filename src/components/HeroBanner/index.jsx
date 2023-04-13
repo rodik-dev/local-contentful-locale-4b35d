@@ -7,6 +7,7 @@ const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const { title, description } = node.data.target.fields;
+      const 
       return <CustomComponent title={title} description={description} />
     }
   }
