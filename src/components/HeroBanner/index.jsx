@@ -6,7 +6,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      const { title, description } = node.data.target.fields;
+      const data = node.
       return <CustomComponent title={title} description={description} />
     }
   }
