@@ -15,7 +15,7 @@ const options = {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const fields = node.data.target.fields;
         console.log("EMbedded Asset!", {node});
-      return <img src={} />
+      return <img src={fields.file.url} />
     }
   }
 };
