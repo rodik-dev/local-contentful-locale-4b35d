@@ -3,7 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ReactMarkdown from 'react-markdown';
 import Container from '../Container';
 import Button from '../Button';
-import Button from '../Button';
+import Card from '../Card';
 
 const options = {
   renderNode: {
