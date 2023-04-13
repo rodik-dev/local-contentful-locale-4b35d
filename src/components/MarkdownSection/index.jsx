@@ -16,7 +16,7 @@ const options = {
         return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
       } else if (contentType === "Card") {
           return <div style={{width: "350px"}}><Card {...fields} data-sb-object-id={sys.id}></Card></div>
-      } else if (contentType === "CTA") {
+      } else if (contentType === "C") {
     },
 
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
