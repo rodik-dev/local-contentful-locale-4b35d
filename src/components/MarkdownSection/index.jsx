@@ -14,7 +14,7 @@ const MarkdownSection = (props) => {
             )}
             {props.fields.rich && 
             <div data-sb-field-path=".rich">
-                {documentToReactComponents(props.fields.test, options)}
+                {documentToReactComponents(props.fields.rich, options)}
             </div>}
         </Container>
     );
