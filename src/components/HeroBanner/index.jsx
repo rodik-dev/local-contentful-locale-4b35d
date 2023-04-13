@@ -7,7 +7,7 @@ const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const { title, description } = node.data.target.fields;
-      const componentId = node.data.target.sys.contentType.sys.id;
+      const Button
       return <CustomComponent title={title} description={description} />
     }
   }
