@@ -14,7 +14,7 @@ const options = {
       if (contentType === "Button") {
         return <Button url={fields.url} text={fields.buttonText} primary={fields.primary} data-sb-object-id={sys.id} data-sb-field-path=".buttonText" />
       } else if (contentType === "Card") {
-          return <Card ></Card>
+          return <Card {...fields}></Card>
       }
     },
 
