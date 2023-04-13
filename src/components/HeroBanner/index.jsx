@@ -1,7 +1,6 @@
 import Container from '../Container';
 import styles from './style.module.css';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
 const HeroBanner = (props) => {
     const { path, fields } = props;
 
