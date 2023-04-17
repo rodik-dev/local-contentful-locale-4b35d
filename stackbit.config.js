@@ -8,7 +8,7 @@ import { defineStackbitConfig } from '@stackbit/types';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // const LOCALIZED_MODELS = ['localizedPage', 'CtaSection', 'MarkdownSection'];
-const LOCALIZED_MODELS = ['localizedPage', 'CtaSection', 'MarkdownSection'];
+const LOCALIZED_MODELS = ['CtaSection', 'MarkdownSection'];
 const LOCALES = ['en-US', 'he']
 const getDocumentLocale = (document) => {
     if (document.fields.slug) {
